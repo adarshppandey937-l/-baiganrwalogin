@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-syne: "Syne", "Noto Sans Devanagari", sans-serif;
+  --font-display: "Syne", "Noto Sans Devanagari", sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Noto Sans Devanagari", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-themeBg: #09050d;
+  --color-cardBg: #130a1c;
+  --color-themeYellow: #facc15;
+  --color-themePurple: #a855f7;
+  --color-themeNeon: #c084fc;
+  --color-themeGreen: #10b981;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: #09050d;
+  color: #e7e5e4;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-bg {
+  background:
+    radial-gradient(800px 600px at 15% -5%, rgba(168, 85, 247, 0.12), transparent 60%),
+    radial-gradient(600px 400px at 90% 80%, rgba(250, 204, 21, 0.05), transparent 50%),
+    #09050d;
+}
+
+.btn-click-effect {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-click-effect:active {
+  transform: scale(0.95);
+}
+
+.premium-card {
+  background: linear-gradient(180deg, rgba(20, 10, 30, 0.8) 0%, rgba(12, 5, 18, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.premium-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow:
+    0 20px 40px -15px rgba(168, 85, 247, 0.25),
+    0 0 15px rgba(168, 85, 247, 0.1);
+  z-index: 10;
+}
+
+.nav-glass {
+  background: rgba(9, 5, 13, 0.72);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+}
+
+.modal-glass,
+.modal-surface {
+  background: linear-gradient(145deg, rgba(20, 10, 30, 0.96), rgba(10, 5, 15, 0.98));
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  box-shadow: 0 0 50px -10px rgba(168, 85, 247, 0.3);
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.font-syne {
+  font-family: var(--font-syne);
+}
+
+.font-display {
+  font-family: var(--font-syne);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

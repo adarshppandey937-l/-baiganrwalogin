@@ -1,0 +1,8 @@
+{
+  "name": "PANDEY JI",
+  "description": "PANDEY JI Study Portal — Competitive exam and board preparation batches, structured subject modules, interactive lecture player, and revision notes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
